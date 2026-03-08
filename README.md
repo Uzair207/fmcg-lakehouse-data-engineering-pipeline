@@ -217,29 +217,48 @@ Medallion Data Architecture
 
 ---
 
+
 # Repository Structure
 
 ```
-architecture/
-    project_architecture.png
+fmcg-lakehouse-data-engineering-pipeline
+│
+├── architecture/
+│   └── project_architecture.png
+│
+├── code/
+│   ├── 1_setup/
+│   │   ├── setup_catalog.py
+│   │   ├── dim_date_table_creation.py
+│   │   └── utilities.py
+│   │
+│   ├── 2_dimension_data_processing/
+│   │   ├── 1_customers_data_processing.py
+│   │   ├── 2_products_data_processing.py
+│   │   └── 3_pricing_data_processing.py
+│   │
+│   ├── 3_fact_data_processing/
+│   │   ├── 1_full_load_fact.py
+│   │   └── 2_incremental_load_fact.py
+│   │
+│   └── queries/
+│       ├── denorm_view_create.sql
+│       └── parent_incremental_load.sql
+│
+├── dashboard/
+│   ├── Dashboard_Overview.png
+│   ├── kpi_metrics.png
+│   ├── monthly_revenue_trend.png
+│   ├── sales_heatmap.png
+│   └── top_products_revenue.png
+│
+├── dataset/
+│   ├── 1_parent_company/
+│   └── 2_child_company/
+│
+└── README.md
+```
 
-code/
-    setup_catalog.py
-    utilities.py
-    dim_date_table_creation.py
-
-    customers_pipeline.py
-    products_pipeline.py
-    pricing_pipeline.py
-
-    full_load_fact.py
-    incremental_load_fact.py
-
-dashboard/
-    sales_dashboard.png
-
-dataset/
-    sample_data
 
 README.md
 ```
